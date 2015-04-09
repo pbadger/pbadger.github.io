@@ -1,0 +1,29 @@
+.header {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.header > .back {
+  position: absolute;
+  left: 17px;
+  top: 9px;
+}
+
+.header > h3{
+  margin-top: 5px;
+  font-size: 25px;
+}
+
+.main-header {
+  text-align: center;
+}
+
+.person-info > img {
+  height: 140px;
+  width: 140px;
+  float: left;
+}
+
+.person-info {
+  height: 150px;
+}

@@ -1,0 +1,48 @@
+.page-header > h2 {
+  text-align: center
+}
+
+.down-arrow, .side-arrow {
+  float: left;
+  margin-right: 5px;
+}
+
+.side-arrow {
+  height: 17px;
+  padding-top: 3px;
+}
+
+.down-arrow {
+  padding-bottom: 5px;
+  height: 25px;
+}
+
+.main-interface {
+  margin-left: 20px;
+}
+
+.townhall-content {
+  margin-bottom: 30px;
+}
+
+.townhall-content > .townhall-name {
+  margin-left: 25px;
+}
+
+.polls-content > .poll-name {
+  margin-left: 25px;
+}
+
+.poll {
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+.create-polls-townhalls {
+  margin-top: 100px;
+}
+
+.row {
+  text-align: center;
+  margin-top: 10px;
+}

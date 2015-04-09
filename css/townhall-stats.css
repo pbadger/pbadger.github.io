@@ -1,0 +1,31 @@
+.page-header > h2 {
+  text-align: center
+}
+
+
+
+.discussion-link {
+  border: 1px solid black;
+  width: 130px;
+  text-align: center;
+  float: none;
+  margin: auto;
+}
+
+table, th, td {
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+}
+
+.stats-table {
+  width: 350px;
+}
+
+.videos {
+  margin-top: 50px ;
+}
+
+.video-upload {
+  width: 350px;
+}
