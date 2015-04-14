@@ -1,0 +1,86 @@
+.graph > img{
+  width: 350px;
+}
+
+.graph {
+  display: none;
+}
+
+.response {
+  display: none;
+}
+
+.login-modal {
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 40px;
+  background: white;
+  border: 2px solid black;
+  z-index: 2;
+}
+
+.login-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .4;
+  z-index: 1;
+}
+
+.login-modal > .container > .inputs {
+  display: none;
+}
+
+.input-wrapper {
+  margin: 10px;
+  text-align: center;
+}
+
+.logout {
+  display: none;
+  float: right;
+  margin-right: 15px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.sharing-modal > img {
+  width: 100px;
+  margin: 4px;
+  cursor: pointer;
+}
+
+.sharing-modal {
+  display: none;
+  border: 2px solid black;
+  position: fixed;
+  top: 200px;
+  background: white;
+}
+
+.sharing-modal > .closer {
+  float: right;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.profile-picture {
+  width: 100px;
+}
+
+.response {
+  width: 300px;
+}
+
+.response > .post-button {
+  float: right;
+}
+
+.response > textarea {
+  width: 200px;
+}
