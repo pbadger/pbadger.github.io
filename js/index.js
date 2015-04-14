@@ -71,6 +71,8 @@ $(document).on('ready', function(){
     $('.sharing-modal').hide()
   })
 
+
+  // voting stuff
 })
 
 
