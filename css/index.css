@@ -63,7 +63,7 @@
   background: white;
 }
 
-.sharing-modal > .closer {
+.closer {
   float: right;
   margin: 5px;
   cursor: pointer;
@@ -83,4 +83,16 @@
 
 .response > textarea {
   width: 200px;
+}
+
+.downvoting-options, .upvoting-options {
+  display: none;
+  position: fixed;
+  height: 30px;
+  background: white;
+  border: 1px solid black;
+}
+
+.up-vote, .down-vote {
+  cursor: pointer;
 }

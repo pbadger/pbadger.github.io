@@ -1,6 +1,5 @@
 $(document).on('ready', function(){
   var logged_in = !!localStorage.getItem('logged_in')
-  var email_login_possible;
 
   if(logged_in){
     $('.logout').show()
@@ -21,7 +20,6 @@ $(document).on('ready', function(){
       $('.login-modal, .login-modal-overlay').show()
       $('.logout').show()
     }
-
     show_response_for(this);
   });
 
@@ -44,22 +42,28 @@ $(document).on('ready', function(){
   });
 
 
+  var log_in = function(){
+    logged_in = true;
+    localStorage.setItem('logged_in', true);
+  }
+
   // Login stuff!
 
   $('.login-modal .fb-login').click(
     function(){
-      $('.login-modal, .login-modal-overlay').hide()
+      log_in()
+      $('.login-modal, .login-modal-overlay').hide();
     }
-  )
+  );
 
   $('.login-modal .email-login').click(function(){
-    $(this).siblings('.inputs').show()
-    email_login_possible = true
+    $(this).siblings('.inputs').show();
+
+    $('.login-modal .email-login').click(function(){
+      log_in();
+      $('.login-modal, .login-modal-overlay').hide(); 
+    });
   });
-
-  logged_in = true
-  localStorage.setItem('logged_in', true)
-
 
   // share button stuff
   $('.share_button').click(function(){
@@ -68,11 +72,29 @@ $(document).on('ready', function(){
 
 
   $('.sharing-modal .closer, .share-button').click(function(){
-    $('.sharing-modal').hide()
-  })
+    $('.sharing-modal').hide();
+  });
 
 
   // voting stuff
+  
+  $('.up-vote').click(function(evt){
+    $('.upvoting-options').css('top', evt.clientY + 15);
+    $('.upvoting-options').show();
+  });
+
+  $('.down-vote').click(function(evt){
+    $('.downvoting-options').css('top', evt.clientY + 15);
+    $('.downvoting-options').show();
+  });
+
+  $('.upvoting-options .closer, button').click(function(){
+    $(this).parents('.upvoting-options').hide()
+  });
+
+  $('.downvoting-options .closer, button').click(function(){
+    $(this).parents('.downvoting-options').hide()
+  });
 })
 
 
