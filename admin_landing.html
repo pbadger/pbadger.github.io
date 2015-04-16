@@ -3,6 +3,7 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/admin-landing.js"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="css/admin_landing.css" rel="stylesheet">
   </head>
@@ -11,23 +12,15 @@
       <h2>Welcome Christine Quinn<h2>
     </div>
     <div class="main-interface">
-      <div class="townhall-content">
-        <img class="down-arrow"src="img/down_arrow.png">
-        <div>Your active town halls</div>
+      <div class="townhall-content" id="active-halls">
+        <h3>Your active town halls</h3>
         <div class="townhall-name">Affordable housing</div>
         <a class="townhall-name" href="admin-townhall-stats.html">Charter Schools</a>
       </div>
-      <div class="polls-content">
-        <img class="down-arrow"src="img/down_arrow.png">
-        <div>Your active polls</div>
+      <div class="polls-content" id="active-polls">
+        <h3>Your active polls</h3>
         <div class="poll">
-          <img class="down-arrow"src="img/down_arrow.png">
-          <div class="townhall-name">Affordable housing</div>
-          <a class="poll-name" href="admin-poll.html">Do you want to have more affordable housing?</a>
-        </div>
-        <div class="poll">
-          <img class="side-arrow" src="img/side_arrow.png">
-          <div class="townhall-name">Charter Schools</div>
+          <a class="poll-name" href="admin-poll.html"><h5>More buses to support charter schools?</h5></a>
         </div>
       </div>
 

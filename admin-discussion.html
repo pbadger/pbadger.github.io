@@ -1,17 +1,21 @@
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="js/admin_discussion.js"></script>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <link href="css/admin-discussion.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
   <div class="container">
-    <h2>Charter Schools discussion</h2>
+    <h2 class-"title">Charter Schools discussion</h2>
+  </div>
+  <div class="container">
     <div class="row">
-        <img class="person" src="img/person.png">
-        <div class="col-md-8">What neighborhoods do you think would benefit more from affordable housing and why?</br>
-          <button type="button" class="btn btn-primary btn-sm">Reply</button>
-          <button type="button" class="btn btn-default btn-sm">Share</button>
+        <img class="person" src="img/quinn.jpg">
+        <div class="col-md-8" id="question-full">
+            <div id="question">What neighborhoods do you think would benefit more from affordable housing and why?</div>
+          <button type="button" class="btn btn-primary btn-sm edit">Edit</button>
         </div>
         <div class="col-md-2">
         <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
@@ -20,16 +24,21 @@
     </div></br>
     <div class="row">
       <div class="col-md-1"></div>
-
       <img class="person" src="img/person.png">
       <div class="col-md-8">I would love seeing more affordable housing in Harvard Square.</br>
-          <button type="button" class="btn btn-primary btn-sm">Reply</button>
-          <button type="button" class="btn btn-default btn-sm">Share</button>
+          <button type="button" class="btn btn-primary btn-sm reply">Reply</button>
+          <button type="button" class="btn btn-default btn-sm share">Share</button>
       </div>
       <div class="col-md-2">
         <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
         <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
       </div>
     </div></br>
+    <div class="row post">
+      <div class="response">
+        <textarea>Your response?</textarea>
+        <button type="button" class="btn btn-primary post-button">Post</button>
+      </div>
+    </div>
   </div>
 </body>
