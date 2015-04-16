@@ -1,5 +1,6 @@
 $(document).on('ready', function(){
   var logged_in = !!localStorage.getItem('logged_in')
+  var video_recorded;
 
   if(logged_in){
     $('.logout').show()
@@ -26,9 +27,12 @@ $(document).on('ready', function(){
 
   // response stuff 
   var response_html_from = function(post_text){
-    return "<div class='container'>You: " + 
+    html = "<div class='container'>You: " + 
     post_text + "</div>"
-
+    if(video_recorded){
+      html += "<img src='img/recorded_video.png'>"
+    }
+    return html
   }
 
   var show_response_for = function(el){
@@ -38,6 +42,7 @@ $(document).on('ready', function(){
   $('.post .post-button').click(function(){
     var post_text = $(this).siblings('textarea').val()
     $(this).parents('.post').append(response_html_from(post_text))
+    video_recorded = false
     $(this).parents('.response:first').hide()
   });
 
@@ -46,6 +51,12 @@ $(document).on('ready', function(){
     logged_in = true;
     localStorage.setItem('logged_in', true);
   }
+
+  $('.response .add_video').click(function(){
+    $(this).parents('.response').find('.add_video').hide()
+    $(this).parents('.response').find('.recorded_video').show()
+    video_recorded = true
+  });
 
   // Login stuff!
 

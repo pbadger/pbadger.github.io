@@ -85,6 +85,17 @@
   width: 200px;
 }
 
+.response > img {
+  width: 40px;
+  margin-right: 100px;
+  cursor: pointer;
+}
+
+.response > .recorded_video {
+  display: none;
+  width: 100px;
+}
+
 .downvoting-options, .upvoting-options {
   display: none;
   position: fixed;
@@ -96,3 +107,4 @@
 .up-vote, .down-vote {
   cursor: pointer;
 }
+
