@@ -1,6 +1,24 @@
 $(document).on('ready', function(){
   var logged_in = !!localStorage.getItem('logged_in')
   var video_recorded;
+  var current_posts = JSON.parse(localStorage.getItem('posts')) || {}
+
+  var response_html_from = function(post_text){
+    html = "<div class='container'>You: " + 
+    post_text + "</div>"
+    if(video_recorded){
+      html += "<img src='img/recorded_video.png'>"
+    }
+    return html
+  }
+
+  if(!$.isEmptyObject(current_posts)){
+    for(i=0; i<3; i++){
+      if(current_posts[i]){
+        $($('.post')[i-1]).append(response_html_from(current_posts[i]))
+      }
+    }
+  }
 
   if(logged_in){
     $('.logout').show()
@@ -26,13 +44,10 @@ $(document).on('ready', function(){
 
 
   // response stuff 
-  var response_html_from = function(post_text){
-    html = "<div class='container'>You: " + 
-    post_text + "</div>"
-    if(video_recorded){
-      html += "<img src='img/recorded_video.png'>"
-    }
-    return html
+
+  var create_response = function(post_text, post_number){
+    current_posts[post_number] = post_text
+    localStorage.setItem('posts', JSON.stringify(current_posts))
   }
 
   var show_response_for = function(el){
@@ -41,9 +56,12 @@ $(document).on('ready', function(){
 
   $('.post .post-button').click(function(){
     var post_text = $(this).siblings('textarea').val()
+    var post_number = $(this).parents('.post').data('post')
+
     $(this).parents('.post').append(response_html_from(post_text))
     video_recorded = false
     $(this).parents('.response:first').hide()
+    create_response(post_text, post_number)
   });
 
 
