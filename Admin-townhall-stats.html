@@ -3,6 +3,7 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="css/townhall-stats.css" rel="stylesheet">
   </head>
@@ -10,16 +11,16 @@
     <div class="page-header">
       <h2>Affordable Housing in Cambridge<h2>
     </div>
-    
-    <div class="container-fluid">
+    <div class="everything">  
       <a href="admin-discussion.html">
-        <button type="button" class="btn btn-primary btn-lg">View Ongoing Discussion</button>
+        <button type="button" class="btn btn-primary btn-lg discussion">View Ongoing Discussion</button>
       </a>
-    </div></br></br>
+      <a href="admin-poll.html">
+        <button type="button" class="btn btn-default btn-lg discussion">Polls</button>
+      </a>
 
-    <div class="container-fluid">
       <h4> Town hall statistics</h4>
-      <table class="stats-table">
+      <table class="stats">
         <tr>
           <td>Month</td>
           <td>View</td> 
@@ -36,11 +37,9 @@
           <td>500</td>
         </tr>
       </table>
-    </div></br>
 
-    <div class="container-fluid">
       <h4>Conversion statistics</h4>
-      <table class="stats-table">
+      <table class="stats" align="center">
         <tr>
           <td>Month</td>
           <td>Facebook</td> 
@@ -57,9 +56,7 @@
           <td>10%</td>
         </tr>
       </table>
-    </div>
 
-    <div class="container-fluid">
       <h4 class="videos">Your videos</h4>
       <img class="video-upload" src="img/video.jpg" align="center">
     </div>

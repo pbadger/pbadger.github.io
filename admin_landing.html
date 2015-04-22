@@ -4,42 +4,57 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="js/admin-landing.js"></script>
+    <script src="js/admin-townhall.js"></script>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="css/admin_landing.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
     <div class="page-header">
-      <h2>Welcome Nadeem Mazen<h2>
+      <h2>Welcome, <b>Nadeem Mazen</b><h2>
     </div>
     <div class="main-interface">
-      <div class="townhall-content" id="active-halls">
-        <h3>Your active town halls</h3>
-        <div>
-          <a div class="townhall-name" href="admin-townhall-stats-charter.html">Charter Schools</a>
-        </div>
-        <div>
-          <a class="townhall-name" href="admin-townhall-stats.html">Affordable Housing in Cambridge</a>
-        </div>
-      </div>
-      <div class="polls-content" id="active-polls">
-        <h3>Your active polls</h3>
-        <div class="poll">
-          <a class="poll-name" href="admin-poll.html"><h5>More buses to support charter schools?</h5></a>
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="img/housing.jpg" height="150" width="150">
+            <div class="caption">
+              <h3>Affordable Housing in Cambridge</h3>
+              <p>Housing is considered "affordable" when the tenant or homeowner pays no more than 30% of their gross income for housing costs. Is housing getting completely unaffordable?
+              </p>
+              <p>
+                <a href="admin-townhall-stats.html" class="btn btn-primary" role="button">View</a> 
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="create-polls-townhalls">
-        <div class="row">
-          <a href="admin-create-poll.html">
-            <button type="submit" class="btn btn-primary btn-lg">Create New Poll</button>
-          </a>
-        </div>
-        <div class="row">
-          <a href="admin-townhall.html">
-            <button type="submit" class="btn btn-primary btn-lg">Create Town Hall</button>
-          </a>
+      <div class="row">
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#CreateHall">Create Town Hall</button>
+      </div>
+
+      <div class="modal fade" id="CreateHall" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3>Create a Town Hall</h3>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <input type="text" id="name" class="form-control" placeholder="Name of town hall"></br>
+                  <img src="img/video.jpg" id="vid" align="center" height="250" width="500"></br></br>
+                  <textarea class="form-control" id="desc" rows="3" placeholder="Describe your town hall"></textarea></br>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary btn-lg submit">Create Town Hall</button></br>
+              </div>
         </div>
       </div>
+    </div>
+
     </div>
   </body>
 </html>

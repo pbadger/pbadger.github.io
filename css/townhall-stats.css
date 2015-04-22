@@ -2,15 +2,9 @@
   text-align: center
 }
 
-
-
-.discussion-link {
-  border: 1px solid black;
-  width: 130px;
+.discussion{
   text-align: center;
-  float: none;
-  margin: auto;
-}
+} 
 
 table, th, td {
   border: 1px solid black;
@@ -18,8 +12,18 @@ table, th, td {
   padding: 5px;
 }
 
+table {
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+th {
+  text-align: center;
+}
+
 .stats-table {
-  width: 350px;
+  width: 700px;
+  text-align: middle;
 }
 
 .videos {
@@ -28,4 +32,8 @@ table, th, td {
 
 .video-upload {
   width: 350px;
+}
+
+.everything{
+  text-align: center;
 }

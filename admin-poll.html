@@ -3,19 +3,47 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/admin-create-poll.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="css/admin_landing.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <div class="page-header">
-          <h1>Poll 1 in <small>Charter Schools</small></h1>
+    <div class="main">
+      <div class="container">
+        <div class="page-header">
+            <h1>Polls <small>Affordable Housing</small></h1>
+        </div>
+      </div>
+      <div class="container"><h4>Do you think there should be more affordable housing in Cambridge?</h4></div>
+      <img class="bar_graph" src="img/bar_graph.png" width="350px"></br>
+
+      <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#CreatePoll">Create Poll</button>
+
+        <div class="modal fade" id="CreatePoll" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h3>Create a Poll</h3>
+                </div>
+                <div class="modal-body">
+                <form>
+                  <textarea class="form-control" id="question" rows="3" placeholder="What's your question?"></textarea></br>
+                  <form class="form-inline">
+                    <input type="option" class="form-control" id="op1" placeholder="Option 1">
+                    <input type="option" class="form-control" id="op2" placeholder="Option 2">
+                    <input type="option" class="form-control" id="op3" placeholder="Option 3">
+                  </form></br>
+                    <button type="submit" class="btn btn-primary btn-lg submit">Create Poll</button></br>
+                </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary btn-lg submit">Create Town Hall</button></br>
+                </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="container"><h4>Should we have more busses to support our charter schools?</h4></div>
-    <div class="container"><h5>Options:</h5>
-    <h6>Yes</h6>
-    <h6>No</h6>
-    <h6>It's Complicated</h6></div>
-    <img class="bar_graph" src="img/bar_graph.png" width="350px">
   </body>
 </html>
