@@ -4,7 +4,7 @@ $(document).on('ready', function(){
   var current_posts = JSON.parse(localStorage.getItem('posts')) || {}
 
   var response_html_from = function(post_text){
-    html = "<div class='container'>You: " + 
+    html = "<div class='container user-response'>You: " + 
     post_text + "</div>"
     if(video_recorded){
       html += "<img src='img/recorded_video.png'>"
@@ -124,6 +124,18 @@ $(document).on('ready', function(){
   $('.downvoting-options .closer, button').click(function(){
     $(this).parents('.downvoting-options').hide()
   });
+
+
+  // Description stuff
+  $('.townhall-desc .reveal-info').click(function(){
+    $('.townhall-desc .extended-text').show()
+    $(this).hide()
+  })
+
+  $('.townhall-desc .hide-info').click(function(){
+    $('.townhall-desc .extended-text').hide()
+    $('.townhall-desc .reveal-info').show()
+  })
 })
 
 

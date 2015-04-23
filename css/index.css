@@ -1,9 +1,14 @@
 .graph > img{
-  width: 350px;
+  width: 270px;
 }
 
 .graph {
   display: none;
+}
+
+.graph > h3 {
+  text-align: center;
+  margin-top: 0px;
 }
 
 .response {
@@ -45,13 +50,12 @@
   display: none;
   float: right;
   margin-right: 15px;
-  margin-top: 5px;
   cursor: pointer;
 }
 
 .sharing-modal > img {
-  width: 100px;
-  margin: 4px;
+  width: 90px;
+  margin: 5px;
   cursor: pointer;
 }
 
@@ -70,11 +74,14 @@
 }
 
 .profile-picture {
-  width: 100px;
+  width: 50px;
+  border-radius: 50px;
+  float: left;
 }
 
 .response {
   width: 300px;
+  margin-top: 10px;
 }
 
 .response > .post-button {
@@ -82,13 +89,15 @@
 }
 
 .response > textarea {
-  width: 200px;
+  width: 190px;
 }
 
 .response > img {
   width: 40px;
-  margin-right: 100px;
+  margin-right: 5px;
   cursor: pointer;
+  margin-left: 5px;
+  float: left;
 }
 
 .response > .recorded_video {
@@ -97,17 +106,145 @@
 }
 
 .downvoting-options, .upvoting-options {
+  left: 10px;
   display: none;
   position: fixed;
-  height: 30px;
+  height: 35px;
   background: white;
   border: 1px solid black;
 }
 
+.upvoting-options, .downvoting-options > button {
+  margin: 4px;
+}
+
 .up-vote, .down-vote {
   cursor: pointer;
+  width: 20px;
+  height: 20px;
 }
 
 .thumbnail {
   text-align: center;
+}
+
+.host-picture {
+  float: left;
+  border-radius: 50px;
+}
+
+.rep-info > .position {
+  margin: 0px;
+  font-size: 25px;
+  float: left;
+  width: 180px;
+  margin-left: 10px;
+}
+
+.rep-info {
+  height: 115px;
+}
+
+.recent-time {
+  float: left;
+  margin-left: 10px;
+  margin-top: 7px;
+  margin-bottom: 0px;
+  width: 180px;
+}
+
+.app-name {
+  float:left;
+  margin-left: 15px;
+}
+
+.logout, .app-name {
+  margin-top: 5px;
+}
+
+.subtitle {
+  color: #777;
+  text-align: center;
+}
+
+.header {
+  height: 30px;
+  background: #FFCD5F;
+}
+
+.page-header {
+  margin-top: 10px;
+}
+
+.preamble {
+  float: left;
+  border: black;
+  border-bottom: 2px solid black;
+  font-size: 20px;
+  padding-bottom: 5px;
+  height: 200px;
+}
+
+.preamble > .welcome-msg {
+  margin-top: 4%;
+  text-align: center;
+}
+
+.welcome-msg .host-picture {
+  float: none;
+  border-radius: 15px;
+  height: 25px;
+  width: 25px;
+}
+
+.townhall-name {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.page-header {
+  border: none;
+}
+
+.extended-text {
+  display: none;
+}
+
+.poll > h2 {
+  margin-bottom: 0px;
+}
+
+.discussion-header {
+  text-align: center;
+}
+
+.row > .post-content {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.comment-text {
+  margin-left: 55px;
+}
+
+.post-actions {
+  margin-left: 57px;
+}
+
+.post {
+  border-radius: 3px;
+}
+
+#post1 {
+  background: #DDD;
+}
+
+.post.comment {
+  margin-left: 15px;
+  border-left: 1px dotted #111;
+}
+
+.user-response {
+  margin-left: 75px;
+  border-left: 1px dotted #111; 
 }
