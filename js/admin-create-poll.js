@@ -1,13 +1,27 @@
 $(document).ready(function() {
-
-	 $(".submit").click(function(){
+	polls = $('#active-polls');
+	$(".submit").click(function(){
 	 	makePoll();
+	 	$('#CreatePoll').modal('hide');
 	 });
 });
 
-function getName(){
-	var name = document.getElementById("name").value;
-	return name;
+function updateFromStorage() {
+	for(var i in localStorage) {
+    	retrieved = JSON.parse(localStorage[i]);
+    	if (i == "polls"){
+			deletePoll(i);
+			addPoll(retrieved['question'], retrieved['objs']);
+		};
+	};
+};
+
+function addPoll(ques, objs){
+	polls.append('<h4>'+ques+'</h4>');
+};
+
+function deletePoll(question){
+  localStorage.removeItem(question);
 };
 
 function getQuestion(){
@@ -23,11 +37,10 @@ function getOptions(){
 };
 
 function makePoll(){
-	var name = getName();
 	var question = getQuestion();
 	var ops = getOptions();
 		
-	obj = {'name': name, 'question': question, 'objs': ops};
+	obj = {'question': question, 'objs': ops};
   	localStorage.setItem("poll", JSON.stringify(obj));
-  	window.location.replace("admin_landing.html");
+  	addPoll(question, ops);
 };
