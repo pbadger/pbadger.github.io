@@ -9,38 +9,36 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
-		<h4 class="logout">Log out</h4>
+		<div class="header">
+			<h4 class="app-name">ShareYourVoice</h4>
+			<h4 class="logout">Log out</h4>
+		</div>
 		<div class="container">
-			<div class="page-header">
-					<h1>Affordable Housing in Cambridge <small>Hosted by Nadeem Mazen</small></h1></br>
-					<a data-toggle="modal" data-target="#bio">
-						<img src="img/campaignphoto.jpg" height="100" width="100">
-					</a>
-					<h1><small>Cambridge City Councilor</small></h1>
-					<h4>Active 20 minutes ago</h4>
+			<div class="preamble">
+				<div class="welcome-msg">
+					ShareYourVoice is an online meeting place where you can talk directly with your elected officials. 
+					<img class="host-picture" src="img/campaignphoto.jpg"> Nadeem Mazen will respond to your comments when he is next online.
+				</div>
 			</div>
 		</div>
-		<div class="modal fade" id="bio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		  <div class="modal-dialog">
-		    <div class="modal-content">
-		      <div class="modal-header">
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-		        <h3 class="modal-title" id="name">Nadeem Bio</h3>
-		        <h4 class="modal-title" id="title">City Councilor</h4>
-		      </div>
-		      <div class="modal-body" id="bio">
-		      	<img src="img/nadeem.png" align="middle" height="150" width="150"></br></br>
-		         Nadeem Mazen is a local business owner, educator, and innovator. After moving to Cambridge for undergraduate and graduate work at MIT, Nadeem fell in love with the city and opened two small businesses in Central Square. Both provide community access to cutting-edge technology, services, and job training.</br></br>
-         
-			     Nadeem also holds a faculty position at the School of the Museum of Fine Arts, where he teaches entrepreneurship and small business practices to emerging artists.</br></br>
-			         
-			     Nadeem's unique set of collaborative and creative problem-solving skills stem from his leadership background in business, art, and technology. He will use this experience to energize City Hall and make municipal politics more accessible.
-		      </div>
-		      <div class="modal-footer">
-		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-		      </div>
-		    </div>
-		  </div>
+		<div class="container">
+			<div>
+				<h1 class="townhall-name">Affordable Housing in Cambridge</h1> 
+				<h4 class="subtitle">Hosted by Nadeem Mazen</h4>
+				<div class="rep-info">
+					<a data-toggle="modal" data-target="#bio">
+						<img class="host-picture" src="img/campaignphoto.jpg" height="100" width="100">
+					</a>
+					<h1 class="position">Cambridge City Councilor</h1>
+					<h4 class="recent-time">Active 20 minutes ago</h4>
+				</div>
+				<div class="townhall-desc">
+					Affordable housing trust funds have been used to leverage other public and private funds to create 1,627 units since the trust was established in 1988, with an additional 175 new units currently under development. The city has been successful in preserving the affordability of more than 1,300 units of rental housing that were in danger of being converted to market-rate housing.
+				<a class="reveal-info">See more</a>
+				<div class="extended-text">
+					<br>The city has provided both technical and financial assistance to tenants and owners of these properties in conjunction with funding from the trust, which has been used to preserve and extend the affordability of these properties. Additionally, newly developed homeownership units, when available, are sold through a lottery processes administered by the Housing Division. <a class="hide-info">See less</a>
+				</div>
+			</div>
 		</div>
 		<div class="container poll">
 			<h2>Poll <small>Do you think there should be more affordable housing in Cambridge?</small></h2></br>
@@ -58,22 +56,23 @@
 					</label>
 				</div>
 				<div class="radio">
-						<label>
-							<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-							It's complicated
+					<label>
+						Other
+						<input>
 					</label>
 				</div>
 			</div>
 			<div class="graph">
-				<h2><small>Results</small></h2>
+				<h3>Results</h3>
 				<img src="img/bar_graph.png">
 			</div>
 		<div class="container">
-			<h2>Discussion <small>Tell us what you think</small></h1></br>
+			<h2>Discussion</br></h2>
+			<h4>Tell us what you think<h4>
 			<div class="q_a">
 				<div class="row post" data-post="1">
 					<div class="col-md-1">
-						<img src="img/campaignphoto.jpg" height="70" width="70">
+						<img src="img/campaignphoto.jpg" class="profile-picture">
 					</div>
 					<div class="col-md-8">What neighborhoods do you think would benefit more from affordable housing and why?</br>
 						<button type="button" class="btn btn-primary btn-sm reply_button">Respond to Nadeem</button>
@@ -156,6 +155,10 @@
 				</div></br>
 			</div>
 		</div>
+
+
+
+		
 		<div class="login-modal">
 			<div class="container">
 				<h1>Log In</br><small>Please log in to comment</small></h1></br></br>
@@ -182,9 +185,7 @@
 			<div class="closer">X</div>
 		</div>
 		<div class="downvoting-options">
-			This is:
-			<button>Disillusioned</button>
-			<button>Insane</button>
+			<button>False infomation</button>
 			<button>I disagree</button>
 			<div class="closer">X</div>
 		</div>
@@ -207,6 +208,30 @@
 
 		<a href= "other-halls.html" >
 			<button type="button" class="btn btn-default btn-lg">See more local issues</button></br></br>
-		</a>			
+		</a>
+
+
+		<div class="modal fade" id="bio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h3 class="modal-title" id="name">Nadeem Bio</h3>
+						<h4 class="modal-title" id="title">City Councilor</h4>
+					</div>
+					<div class="modal-body" id="bio">
+						<img src="img/nadeem.png" align="middle" height="150" width="150"></br></br>
+						Nadeem Mazen is a local business owner, educator, and innovator. After moving to Cambridge for undergraduate and graduate work at MIT, Nadeem fell in love with the city and opened two small businesses in Central Square. Both provide community access to cutting-edge technology, services, and job training.</br></br>
+				 
+						Nadeem also holds a faculty position at the School of the Museum of Fine Arts, where he teaches entrepreneurship and small business practices to emerging artists.</br></br>
+							 
+						Nadeem's unique set of collaborative and creative problem-solving skills stem from his leadership background in business, art, and technology. He will use this experience to energize City Hall and make municipal politics more accessible.
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>			
 	</body>
 </html>

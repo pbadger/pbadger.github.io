@@ -124,6 +124,18 @@ $(document).on('ready', function(){
   $('.downvoting-options .closer, button').click(function(){
     $(this).parents('.downvoting-options').hide()
   });
+
+
+  // Description stuff
+  $('.townhall-desc .reveal-info').click(function(){
+    $('.townhall-desc .extended-text').show()
+    $(this).hide()
+  })
+
+  $('.townhall-desc .hide-info').click(function(){
+    $('.townhall-desc .extended-text').hide()
+    $('.townhall-desc .reveal-info').show()
+  })
 })
 
 
