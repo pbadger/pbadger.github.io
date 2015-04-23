@@ -275,3 +275,7 @@
   opacity: 0;
   margin-bottom: 3px; 
 }
+
+.body {
+  margin-right: -15px;
+}
