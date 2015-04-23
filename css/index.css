@@ -182,12 +182,14 @@
   border-bottom: 2px solid black;
   font-size: 20px;
   padding-bottom: 5px;
-  height: 200px;
 }
 
 .preamble > .welcome-msg {
   margin-top: 4%;
+  margin-bottom: 4%;
   text-align: center;
+  line-height: 23px;
+  font-size: 18px;
 }
 
 .welcome-msg .host-picture {
@@ -210,8 +212,14 @@
   display: none;
 }
 
-.poll > h2 {
+.poll > h1 {
+  text-align: center;
   margin-bottom: 0px;
+}
+
+.poll > h4 {
+  letter-spacing: .5px;
+  text-align: center;
 }
 
 .discussion-header {
@@ -232,11 +240,24 @@
 }
 
 .post {
+  padding-bottom: 5px;
   border-radius: 3px;
+}
+
+.buttons > button {
+  margin: 5px;
+}
+
+.answers {
+  text-align: center;
 }
 
 #post1 {
   background: #DDD;
+}
+
+#post1 > .response {
+  margin-left: 47px;
 }
 
 .post.comment {
@@ -247,4 +268,10 @@
 .user-response {
   margin-left: 75px;
   border-left: 1px dotted #111; 
+}
+
+.other-button {
+  display: none;
+  opacity: 0;
+  margin-bottom: 3px; 
 }
