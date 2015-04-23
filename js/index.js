@@ -4,7 +4,7 @@ $(document).on('ready', function(){
   var current_posts = JSON.parse(localStorage.getItem('posts')) || {}
 
   var response_html_from = function(post_text){
-    html = "<div class='container'>You: " + 
+    html = "<div class='container user-response'>You: " + 
     post_text + "</div>"
     if(video_recorded){
       html += "<img src='img/recorded_video.png'>"

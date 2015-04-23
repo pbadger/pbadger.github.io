@@ -54,8 +54,8 @@
 }
 
 .sharing-modal > img {
-  width: 100px;
-  margin: 4px;
+  width: 90px;
+  margin: 5px;
   cursor: pointer;
 }
 
@@ -74,12 +74,14 @@
 }
 
 .profile-picture {
-  width: 100px;
+  width: 50px;
   border-radius: 50px;
+  float: left;
 }
 
 .response {
   width: 300px;
+  margin-top: 10px;
 }
 
 .response > .post-button {
@@ -87,13 +89,15 @@
 }
 
 .response > textarea {
-  width: 200px;
+  width: 190px;
 }
 
 .response > img {
   width: 40px;
-  margin-right: 100px;
+  margin-right: 5px;
   cursor: pointer;
+  margin-left: 5px;
+  float: left;
 }
 
 .response > .recorded_video {
@@ -102,15 +106,22 @@
 }
 
 .downvoting-options, .upvoting-options {
+  left: 10px;
   display: none;
   position: fixed;
-  height: 30px;
+  height: 35px;
   background: white;
   border: 1px solid black;
 }
 
+.upvoting-options, .downvoting-options > button {
+  margin: 4px;
+}
+
 .up-vote, .down-vote {
   cursor: pointer;
+  width: 20px;
+  height: 20px;
 }
 
 .thumbnail {
@@ -201,4 +212,39 @@
 
 .poll > h2 {
   margin-bottom: 0px;
+}
+
+.discussion-header {
+  text-align: center;
+}
+
+.row > .post-content {
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+.comment-text {
+  margin-left: 55px;
+}
+
+.post-actions {
+  margin-left: 57px;
+}
+
+.post {
+  border-radius: 3px;
+}
+
+#post1 {
+  background: #DDD;
+}
+
+.post.comment {
+  margin-left: 15px;
+  border-left: 1px dotted #111;
+}
+
+.user-response {
+  margin-left: 75px;
+  border-left: 1px dotted #111; 
 }
