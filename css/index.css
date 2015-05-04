@@ -74,7 +74,7 @@
 }
 
 .sharing-modal > img {
-  width: 90px;
+  width: 75px;
   margin: 5px;
   cursor: pointer;
 }
@@ -85,6 +85,7 @@
   position: fixed;
   top: 200px;
   background: white;
+  margin-left: 20px;
 }
 
 .closer {
@@ -102,14 +103,17 @@
 .response {
   width: 300px;
   margin-top: 10px;
+  margin-left: 20px;
 }
 
 .response > .post-button {
-  float: right;
+  float: left;
+  margin-left: 5px;
 }
 
 .response > textarea {
-  width: 190px;
+  width: 170px;
+  float: left;
 }
 
 .response > img {
@@ -123,6 +127,7 @@
 .response > .recorded_video {
   display: none;
   width: 100px;
+  width: 40px;
 }
 
 .downvoting-options, .upvoting-options {
@@ -281,7 +286,7 @@
 }
 
 #post1 > .response {
-  margin-left: 47px;
+  margin-left: 25px;
 }
 
 .post.comment {
@@ -291,7 +296,9 @@
 
 .user-response {
   margin-left: 75px;
-  border-left: 1px dotted #111; 
+  float: right;
+  border-left: 
+  1px dotted #111; 
 }
 
 .other-button {
