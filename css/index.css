@@ -183,7 +183,7 @@
 }
 
 .header {
-  width: 105%;
+  /*width: 105%;*/
   height: 30px;
   background: #FFCD5F;
 }
@@ -258,6 +258,8 @@
 .post {
   padding-bottom: 5px;
   border-radius: 3px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .buttons > button {
