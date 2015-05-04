@@ -59,7 +59,6 @@ $(document).on('ready', function(){
   }
 
   $('.post .post-button').click(function(){
-    debugger
     if(!logged_in){
       $('.login-modal, .login-modal-overlay').show()
       $('.logout').show()
