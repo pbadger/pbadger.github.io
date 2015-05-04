@@ -143,11 +143,13 @@ $(document).on('ready', function(){
   // voting stuff
   
   $('.up-vote').click(function(evt){
+    $(this).addClass('chosen')
     $('.upvoting-options').css('top', evt.clientY + 15);
     $('.upvoting-options').show();
   });
 
   $('.down-vote').click(function(evt){
+    $(this).addClass('chosen')
     $('.downvoting-options').css('top', evt.clientY + 15);
     $('.downvoting-options').show();
   });

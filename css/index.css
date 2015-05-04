@@ -150,6 +150,12 @@
   height: 20px;
 }
 
+.chosen {
+  border: 1px solid #555;
+  border-radius: 40px;
+  padding: 2px;
+}
+
 .thumbnail {
   text-align: center;
 }
