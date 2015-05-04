@@ -101,6 +101,14 @@ $(document).on('ready', function(){
     });
   });
 
+  $('.login-modal-overlay').click(function(){
+    $('.login-modal, .login-modal-overlay').hide();
+  });
+
+  $('.login-modal .exit').click(function(){
+    $('.login-modal, .login-modal-overlay').hide();
+  });
+
   // share button stuff
   $('.share_button').click(function(){
     $('.sharing-modal').show();

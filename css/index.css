@@ -19,10 +19,25 @@
   display: none;
   position: fixed;
   top: 100px;
-  left: 40px;
+  left: 10px;
   background: white;
   border: 2px solid black;
   z-index: 2;
+}
+
+.login-modal > .container > h1 {
+  float:left;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.login-modal > .container > .exit {
+  float: right;
+  margin-top: 10px;
+}
+
+.login-modal > .container > button {
+  margin-bottom: 5px;
 }
 
 .login-modal-overlay {
@@ -168,6 +183,7 @@
 }
 
 .header {
+  width: 105%;
   height: 30px;
   background: #FFCD5F;
 }
