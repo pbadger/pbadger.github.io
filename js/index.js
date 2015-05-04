@@ -1,6 +1,7 @@
 $(document).on('ready', function(){
   var logged_in = !!localStorage.getItem('logged_in')
   var video_recorded;
+  var response_in_progress;
   var current_posts = JSON.parse(localStorage.getItem('posts')) || {}
 
   var response_html_from = function(post_text){
@@ -35,10 +36,6 @@ $(document).on('ready', function(){
   });
 
   $('.reply_button').click(function(){
-    if(!logged_in){
-      $('.login-modal, .login-modal-overlay').show()
-      $('.logout').show()
-    }
     show_response_for(this);
   });
 
@@ -62,13 +59,21 @@ $(document).on('ready', function(){
   }
 
   $('.post .post-button').click(function(){
-    var post_text = $(this).siblings('textarea').val()
-    var post_number = $(this).parents('.post').data('post')
+    debugger
+    if(!logged_in){
+      $('.login-modal, .login-modal-overlay').show()
+      $('.logout').show()
+      response_in_progress = this
+    } else {
+      var post_text = $(this).siblings('textarea').val()
+      var post_number = $(this).parents('.post').data('post')
 
-    $(this).parents('.post').append(response_html_from(post_text))
-    video_recorded = false
-    $(this).parents('.response:first').hide()
-    create_response(post_text, post_number)
+      $(this).parents('.post').append(response_html_from(post_text))
+      video_recorded = false
+      $(this).parents('.response:first').hide()
+      create_response(post_text, post_number)
+      $('#thankYou').modal()
+    }
   });
 
 
@@ -85,10 +90,25 @@ $(document).on('ready', function(){
 
   // Login stuff!
 
+  var trigger_response = function(){
+    if(response_in_progress){
+      response_el = response_in_progress
+      var post_text = $(response_el).siblings('textarea').val()
+      var post_number = $(response_el).parents('.post').data('post')
+
+      $(response_el).parents('.post').append(response_html_from(post_text))
+      video_recorded = false
+      $(response_el).parents('.response:first').hide()
+      create_response(post_text, post_number)
+      $('#thankYou').modal()
+    }
+  }
+
   $('.login-modal .fb-login').click(
     function(){
       log_in()
       $('.login-modal, .login-modal-overlay').hide();
+      trigger_response()
     }
   );
 
@@ -97,7 +117,8 @@ $(document).on('ready', function(){
 
     $('.login-modal .email-login').click(function(){
       log_in();
-      $('.login-modal, .login-modal-overlay').hide(); 
+      $('.login-modal, .login-modal-overlay').hide();
+      trigger_response()
     });
   });
 

@@ -23,7 +23,7 @@
   background: white;
   border: 2px solid black;
   z-index: 2;
-  width: 87%;
+  width: 300px;
 }
 
 .login-modal > .container > h1 > small{
