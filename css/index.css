@@ -23,6 +23,11 @@
   background: white;
   border: 2px solid black;
   z-index: 2;
+  width: 87%;
+}
+
+.login-modal > .container > h1 > small{
+  font-size: 22px;
 }
 
 .login-modal > .container > h1 {
@@ -127,10 +132,11 @@
   height: 35px;
   background: white;
   border: 1px solid black;
+  padding-left: 2px;
 }
 
-.upvoting-options, .downvoting-options > button {
-  margin: 4px;
+.upvoting-options > button, .downvoting-options > button {
+  margin-top: 3px;
 }
 
 .up-vote, .down-vote {
