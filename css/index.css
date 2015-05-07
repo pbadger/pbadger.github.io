@@ -19,10 +19,30 @@
   display: none;
   position: fixed;
   top: 100px;
-  left: 40px;
+  left: 10px;
   background: white;
   border: 2px solid black;
   z-index: 2;
+  width: 300px;
+}
+
+.login-modal > .container > h1 > small{
+  font-size: 22px;
+}
+
+.login-modal > .container > h1 {
+  float:left;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+.login-modal > .container > .exit {
+  float: right;
+  margin-top: 10px;
+}
+
+.login-modal > .container > button {
+  margin-bottom: 5px;
 }
 
 .login-modal-overlay {
@@ -54,7 +74,7 @@
 }
 
 .sharing-modal > img {
-  width: 90px;
+  width: 75px;
   margin: 5px;
   cursor: pointer;
 }
@@ -65,6 +85,7 @@
   position: fixed;
   top: 200px;
   background: white;
+  margin-left: 20px;
 }
 
 .closer {
@@ -82,14 +103,17 @@
 .response {
   width: 300px;
   margin-top: 10px;
+  margin-left: 20px;
 }
 
 .response > .post-button {
-  float: right;
+  float: left;
+  margin-left: 5px;
 }
 
 .response > textarea {
-  width: 190px;
+  width: 170px;
+  float: left;
 }
 
 .response > img {
@@ -103,6 +127,7 @@
 .response > .recorded_video {
   display: none;
   width: 100px;
+  width: 40px;
 }
 
 .downvoting-options, .upvoting-options {
@@ -112,16 +137,23 @@
   height: 35px;
   background: white;
   border: 1px solid black;
+  padding-left: 2px;
 }
 
-.upvoting-options, .downvoting-options > button {
-  margin: 4px;
+.upvoting-options > button, .downvoting-options > button {
+  margin-top: 3px;
 }
 
 .up-vote, .down-vote {
   cursor: pointer;
   width: 20px;
   height: 20px;
+}
+
+.chosen {
+  border: 1px solid #555;
+  border-radius: 40px;
+  padding: 2px;
 }
 
 .thumbnail {
@@ -168,6 +200,7 @@
 }
 
 .header {
+  /*width: 105%;*/
   height: 30px;
   background: #FFCD5F;
 }
@@ -242,6 +275,8 @@
 .post {
   padding-bottom: 5px;
   border-radius: 3px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .buttons > button {
@@ -257,7 +292,7 @@
 }
 
 #post1 > .response {
-  margin-left: 47px;
+  margin-left: 25px;
 }
 
 .post.comment {
@@ -267,7 +302,9 @@
 
 .user-response {
   margin-left: 75px;
-  border-left: 1px dotted #111; 
+  float: left;
+  border-left: 
+  1px dotted #111; 
 }
 
 .other-button {
