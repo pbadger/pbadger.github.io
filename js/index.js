@@ -24,7 +24,7 @@ $(document).on('ready', function(){
     $('.logout').show()
   }
 
-  $('.poll .radio').click(function(){
+  $('.poll button').click(function(){
     $('.poll .answers').hide()
     $('.poll .graph').show()
   })  
@@ -40,6 +40,13 @@ $(document).on('ready', function(){
       $('.logout').show()
     }
     show_response_for(this);
+  });
+
+
+  $('.poll input').click(function(){
+    $('.other-option').hide()
+    $('.other-button').css('display', 'inline-block')
+    $('.other-button').animate({opacity: 1}, 1000)
   });
 
 
