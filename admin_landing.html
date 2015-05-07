@@ -45,7 +45,13 @@
               <div class="modal-body">
                 <form>
                   <input type="text" id="name" class="form-control" placeholder="Name of town hall"></br>
-                  <img src="img/video.jpg" id="vid" align="center" height="169" width="300"></br></br>
+                  <div class="fileinput fileinput-new" data-provides="fileinput">
+                      <span class="btn btn-default btn-file">
+                        <span class="fileinput-new">Select image</span>
+                        <span class="fileinput-exists"></span>
+                        <input id="img" type="file" name="img" data-trigger="fileinput">
+                      </span>
+                  </div></br>
                   <textarea class="form-control" id="desc" rows="3" placeholder="Describe your town hall"></textarea></br>
                 </form>
               </div>
