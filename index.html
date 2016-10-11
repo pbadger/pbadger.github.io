@@ -16,6 +16,7 @@
             number        : form.username.value || "Anonymous", // listen on username line else Anonymous
             publish_key   : 'pub-c-e9f8ffa0-89df-40ec-8585-69be7bcb2dc1',
             subscribe_key : 'sub-c-0de5b164-8f57-11e6-8409-0619f8945a4f',
+            ssl: true
         }); 
         phone.ready(function(){ form.username.style.background="#55ff5b"; });
         phone.receive(function(session){
