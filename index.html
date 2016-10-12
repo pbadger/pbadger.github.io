@@ -11,7 +11,6 @@
       var video_out = document.getElementById("vid-box");
 
       function login(form) {
-        alert('worked');
         var phone = window.phone = PHONE({
             number        : form.username.value || "Anonymous", // listen on username line else Anonymous
             publish_key   : 'pub-c-e9f8ffa0-89df-40ec-8585-69be7bcb2dc1',
@@ -20,6 +19,7 @@
         }); 
         phone.ready(function(){ form.username.style.background="#55ff5b"; });
         phone.receive(function(session){
+            alert('broh!');
             session.connected(function(session) { video_out.appendChild(session.video); });
             session.ended(function(session) { video_out.innerHTML=''; });
         });
