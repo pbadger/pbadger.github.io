@@ -23,14 +23,14 @@
 
         let interval;
         phone.ready( () => {
-            interval = setInterval( () => { phone.dial('operator') }, 5000);
+            interval = setInterval( () => { phone.dial('operator') }, 3000);
         });
 
         phone.receive( (session) => {
             window.clearInterval(interval);
             session.connected( (session) => { 
               video_out.appendChild(session.video);
-              $(video_out).find('video').css('height', '700px')
+              $(video_out).find('video').css('height', '720px')
             });
             session.ended( () => { video_out.innerHTML=''; });
         });
