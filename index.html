@@ -26,12 +26,15 @@
         });
 
         phone.receive( (session) => {
-            phone.dial('operator');
+            alert('call recieved on tablet')
+            // phone.dial('operator');
             session.connected( (session) => { video_out.appendChild(session.video); });
             session.ended( () => { video_out.innerHTML=''; });
         });
       }
       login();
+
+      setTimeout( () => {phone.dial('operator');}, 10000);
     </script>
   </body>
 </html>
