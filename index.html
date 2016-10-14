@@ -5,43 +5,33 @@
     <script src="https://cdn.pubnub.com/webrtc/webrtc.js"></script>
   </head>
   <body>
+    Bender Controls
+
     <div id="vid-box"></div>
 
     <script type="text/javascript">
       var video_out = document.getElementById("vid-box");
 
-      function login(form) {
+      const login = () => {
+        console.log('pubnub logging in');
         var phone = window.phone = PHONE({
-            number        : form.username.value || "Anonymous", // listen on username line else Anonymous
+            number        : "bender", // listen on username line else Anonymous
             publish_key   : 'pub-c-e9f8ffa0-89df-40ec-8585-69be7bcb2dc1',
             subscribe_key : 'sub-c-0de5b164-8f57-11e6-8409-0619f8945a4f',
             ssl: true
-        }); 
-        phone.ready(function(){ form.username.style.background="#55ff5b"; });
-        phone.receive(function(session){
-            alert('broh!');
-            session.connected(function(session) { video_out.appendChild(session.video); });
-            session.ended(function(session) { video_out.innerHTML=''; });
         });
-        return false;   // So the form does not submit.
-      }
 
-      function makeCall(form){
-        if (!window.phone) alert("Login First!");
-        else phone.dial(form.number.value);
-        return false;
+        phone.ready( () => {
+          alert('pubnub ready')
+        });
+
+        phone.receive( (session) => {
+            phone.dial('operator');
+            session.connected( (session) => { video_out.appendChild(session.video); });
+            session.ended( () => { video_out.innerHTML=''; });
+        });
       }
+      login();
     </script>
-
-
-    <form name="loginForm" id="login" action="#" onsubmit="return login(this);">
-        <input type="text" name="username" id="username" placeholder="Pick a username!" />
-        <input type="submit" name="login_submit" value="Log In">
-    </form>
-
-    <form name="callForm" id="call" action="#" onsubmit="return makeCall(this);">
-      <input type="text" name="number" placeholder="Enter user to dial!" />
-      <input type="submit" value="Call"/>
-    </form>
   </body>
 </html>
