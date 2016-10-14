@@ -7,7 +7,7 @@
   <body style="background: black">
     Bender Controls
 
-    <div id="vid-box" style="height: 800px"></div>
+    <div id="vid-box"></div>
 
     <script type="text/javascript">
       var video_out = document.getElementById("vid-box");
@@ -30,7 +30,7 @@
             window.clearInterval(interval);
             session.connected( (session) => { 
               video_out.appendChild(session.video);
-              $(video_out).find('video').css('height', '660px')
+              $(video_out).find('video').css('height', '700px')
             });
             session.ended( () => { video_out.innerHTML=''; });
         });
