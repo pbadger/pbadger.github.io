@@ -30,7 +30,7 @@
             // phone.dial('operator');
             session.connected( (session) => { 
               video_out.appendChild(session.video);
-              debugger
+              $(video_out).find('video').css('height', '600px')
             });
             session.ended( () => { video_out.innerHTML=''; });
         });
