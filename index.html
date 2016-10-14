@@ -28,7 +28,10 @@
         phone.receive( (session) => {
             alert('call recieved on tablet')
             // phone.dial('operator');
-            session.connected( (session) => { video_out.appendChild(session.video); });
+            session.connected( (session) => { 
+              video_out.appendChild(session.video);
+              debugger
+            });
             session.ended( () => { video_out.innerHTML=''; });
         });
       }
