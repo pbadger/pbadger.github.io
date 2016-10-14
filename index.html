@@ -4,7 +4,7 @@
     <script src="https://cdn.pubnub.com/pubnub-3.7.14.min.js"></script>
     <script src="https://cdn.pubnub.com/webrtc/webrtc.js"></script>
   </head>
-  <body>
+  <body style="background: black">
     Bender Controls
 
     <div id="vid-box" style="height: 680px"></div>
@@ -30,7 +30,7 @@
             // phone.dial('operator');
             session.connected( (session) => { 
               video_out.appendChild(session.video);
-              $(video_out).find('video').css('height', '600px')
+              $(video_out).find('video').css('height', '660px')
             });
             session.ended( () => { video_out.innerHTML=''; });
         });
