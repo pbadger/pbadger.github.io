@@ -21,13 +21,13 @@
             ssl: true
         });
 
+        let interval;
         phone.ready( () => {
-          alert('pubnub ready')
+            interval = setInterval( () => { phone.dial('operator') }, 5000);
         });
 
         phone.receive( (session) => {
-            alert('call recieved on tablet')
-            // phone.dial('operator');
+            window.clearInterval(interval);
             session.connected( (session) => { 
               video_out.appendChild(session.video);
               $(video_out).find('video').css('height', '660px')
@@ -36,8 +36,6 @@
         });
       }
       login();
-
-      setTimeout( () => {phone.dial('operator');}, 10000);
     </script>
   </body>
 </html>
