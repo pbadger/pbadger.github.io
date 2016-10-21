@@ -16,7 +16,7 @@
       const login = () => {
         console.log('pubnub logging in');
         var phone = window.phone = PHONE({
-            number        : "bender", // listen on username line else Anonymous
+            number        : "bender2", // listen on username line else Anonymous
             publish_key   : 'pub-c-e9f8ffa0-89df-40ec-8585-69be7bcb2dc1',
             subscribe_key : 'sub-c-0de5b164-8f57-11e6-8409-0619f8945a4f',
             ssl: true
@@ -26,7 +26,7 @@
         phone.ready( () => {
             // interval = setInterval( () => { 
               // console.log('dialing operator');
-            phone.dial('operator') 
+            phone.dial('operator2') 
             // }, 3000);
         });
 
