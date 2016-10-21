@@ -31,7 +31,6 @@
         });
 
         phone.receive( (session) => {
-            alert('received phone call')
             session.connected( (session) => { 
               video_out.appendChild(session.video);
               $(video_out).find('video').css('height', '720px')
