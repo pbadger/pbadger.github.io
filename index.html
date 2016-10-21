@@ -10,8 +10,9 @@
     <div id="vid-box"></div>
 
     <script type="text/javascript">
-      var video_out = document.getElementById("vid-box");
-
+      let video_out = document.getElementById("vid-box");
+      
+      let interval;
       const login = () => {
         console.log('pubnub logging in');
         var phone = window.phone = PHONE({
@@ -21,11 +22,11 @@
             ssl: true
         });
 
-        let interval;
+        
         phone.ready( () => {
             interval = setInterval( () => { 
               console.log('dialing operator');
-              dialphone.dial('operator') 
+              phone.dial('operator') 
             }, 3000);
         });
 
