@@ -10,10 +10,10 @@
     <div id="vid-box"></div>
 
     <script type="text/javascript">
-      let video_out = document.getElementById("vid-box");
+      var video_out = document.getElementById("vid-box");
       
-      let interval;
-      const login = () => {
+      var interval;
+      const login = function() {
         console.log('pubnub logging in');
         var phone = window.phone = PHONE({
             number        : "bender2", // listen on username line else Anonymous
@@ -23,20 +23,20 @@
         });
 
         
-        phone.ready( () => {
+        phone.ready( function(){
             // interval = setInterval( () => { 
               // console.log('dialing operator');
             phone.dial('operator2') 
             // }, 3000);
         });
 
-        phone.receive( (session) => {
-            session.connected( (session) => { 
+        phone.receive( function(session){
+            session.connected( function(session) { 
               video_out.appendChild(session.video);
               $(video_out).find('video').css('height', '720px')
               window.clearInterval(interval);
             });
-            session.ended( () => { video_out.innerHTML=''; });
+            session.ended( function(){ video_out.innerHTML=''; });
         });
       }
       login();
