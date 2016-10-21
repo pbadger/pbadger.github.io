@@ -24,13 +24,14 @@
 
         
         phone.ready( () => {
-            interval = setInterval( () => { 
+            // interval = setInterval( () => { 
               console.log('dialing operator');
               phone.dial('operator') 
-            }, 3000);
+            // }, 3000);
         });
 
         phone.receive( (session) => {
+            alert('received phone call')
             session.connected( (session) => { 
               video_out.appendChild(session.video);
               $(video_out).find('video').css('height', '720px')
