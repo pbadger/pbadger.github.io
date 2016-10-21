@@ -23,14 +23,17 @@
 
         let interval;
         phone.ready( () => {
-            interval = setInterval( () => { phone.dial('operator') }, 3000);
+            interval = setInterval( () => { 
+              console.log('dialing operator');
+              dialphone.dial('operator') 
+            }, 3000);
         });
 
         phone.receive( (session) => {
-            window.clearInterval(interval);
             session.connected( (session) => { 
               video_out.appendChild(session.video);
               $(video_out).find('video').css('height', '720px')
+              window.clearInterval(interval);
             });
             session.ended( () => { video_out.innerHTML=''; });
         });
