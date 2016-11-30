@@ -19,6 +19,69 @@
     <!-- <div id="vid-box"></div> -->
     
     <script type="text/javascript">
+      var call = null;
+      var ros = null;
+      var teleopTopic = null;
+      var costmapTopic = null;
+      var currentTaskTopic = null;
+      var navGoalTopic = null;
+      var pathTopic = null;
+
+      var initialize = (dataChannel) => {
+        ros = new ROSLIB.Ros();
+
+        ros.transportLibrary = call.pc;
+        ros.transportOptions = {
+          reliable: false,
+          ordered: true,
+          protocol: 'application/vnd.rosbridge.v1+json; chunksize=512'
+        };
+        ros.connect(dataChannel);
+        call.adaptROSClient(ros);
+
+        $(window).on('beforeunload', function() {
+          if (call) {
+            call.hangup();
+          }
+        });
+      }
+
+      var callRobot = (browserId, peerId, websocketAddress) => {
+        const signaling = new ros_webrtc.Signaling({
+          server: websocketAddress,
+          id: browserId
+        });
+
+        signaling.once('connected', function () {
+          call = new ros_webrtc.Call({
+            id: UUIDjs.create().toString().replace(/-/g, ''),
+            peer_id: peerId,
+            signaling: signaling
+          });
+
+          call.on('change:stream', function(callModel){
+            const stream = callModel.get('stream');
+            // var stream = callModel.get('stream');
+            // attachMediaStream(document.getElementById('pico-video'), stream);
+            // const frontVideoStream = new stream.constructor;
+            // const frontVideoTrack = stream.getTrackById('webcam_front');
+            // frontVideoStream.addTrack(frontVideoTrack);
+            // attachMediaStream(document.getElementById('front-video'), frontVideoStream);
+
+            const kinectVideoStream = new stream.constructor;
+            const kinectVideoTrack = stream.getTrackById('webcam_front');
+            kinectVideoStream.addTrack(kinectVideoTrack);
+            attachMediaStream(document.getElementById('kinect-video'), kinectVideoStream);
+
+            // other videos are available as 'front_video', 'back_video', 'right_video', 'left_video'
+          });
+
+          initialize('rosbridge');
+          call.dial();
+        });
+      }
+
+      callRobot('tablet', 'turtlebot3', 'ws://10.42.0.1:9000')
       // var video_out = document.getElementById("vid-box");
       
       // var interval;
